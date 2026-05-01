@@ -1,0 +1,10 @@
+.vscode/
+log/
+build/
+install/
+
+## pycache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
