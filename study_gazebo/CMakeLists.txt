@@ -21,4 +21,16 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+
+function(custom_executable target)
+  add_executable(${target}_node src/${target}.cpp)
+  ament_target_dependencies(${target}_node
+    "rclcpp")
+  install(TARGETS ${target}_node
+  DESTINATION lib/${PROJECT_NAME})
+endfunction()
+
+custom_executable(simple_loop)
+custom_executable(simple_node)
+
 ament_package()
