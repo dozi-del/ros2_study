@@ -30,6 +30,8 @@ function(custom_executable target)
   DESTINATION lib/${PROJECT_NAME})
 endfunction()
 
+custom_executable(lifecycle)
+custom_executable(simple_bind)
 custom_executable(simple_loop)
 custom_executable(simple_node)
 
